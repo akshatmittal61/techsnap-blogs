@@ -1,0 +1,36 @@
+.card {
+	&-frame {
+		min-height: 90%;
+		width: 90%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0.25rem;
+		padding: 0.5rem 0.25rem;
+		@include respond(phone) {
+			padding: 0.25rem;
+		}
+		border-radius: 10px;
+		overflow: hidden;
+		background: linear-gradient(90deg, var(--green) 4%, var(--blue) 0%)
+				top/100% 34% no-repeat,
+			linear-gradient(90deg, var(--yellow) 50%, var(--blue) 0%) top/100%
+				82% no-repeat,
+			linear-gradient(90deg, var(--yellow) 10%, var(--red) 0%) top/100%
+				100%;
+		box-shadow: 0 10px 15px rgba(60, 64, 67, 0.3);
+	}
+	&-box {
+		position: relative;
+		height: 99%;
+		width: 99%;
+		padding: 0;
+		border-radius: 10px;
+		background-color: var(--bgcolor);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column;
+		transition: all var(--transition-time) ease-in-out;
+	}
+}
